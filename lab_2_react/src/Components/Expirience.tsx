@@ -2,17 +2,25 @@ import React from 'react';
 
 export const Expirience = () => {
     return (
-        <section>
-            <h2>Досвід роботи</h2>
-            Досвід створення веб-додатків на React та Vue.
-            Працював над кількома фриланс проєктами, де розробляв інтерфейси,
-            реалізовував взаємодію з API та керування станом додатків.
-            <article>
-                <h3>Frontend Developer (Freelance)</h3>
-                <p>Розробка веб-додатків на замовлення.</p>
+        <section className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md mb-6 transition:-trnasform duration-300 hover:translate-y-2">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+                Досвід роботи
+            </h2>
 
-                <h4>Основні задачі:</h4>
-                <ul>
+            <article>
+                <h3 className="text-xl font-semibold text-gray-700">
+                    Frontend Developer (Freelance)
+                </h3>
+
+                <p className="text-gray-600 mt-2 mb-4">
+                    Розробка веб-додатків на замовлення.
+                </p>
+
+                <h4 className="font-medium text-gray-700 mb-2">
+                    Основні задачі:
+                </h4>
+
+                <ul className="list-disc list-inside space-y-1 text-gray-600">
                     <li>Створення користувацьких інтерфейсів на React та Vue</li>
                     <li>Інтеграція REST API через Axios</li>
                     <li>Керування станом додатку через Redux Toolkit та Zustand</li>
@@ -21,8 +29,6 @@ export const Expirience = () => {
                     <li>Стилізація інтерфейсів за допомогою SCSS та Tailwind CSS</li>
                 </ul>
             </article>
-            ```
-
         </section>
     )
 }
