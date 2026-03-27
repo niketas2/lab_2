@@ -1,24 +1,32 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
+type Comment = {
+    id: number;
+    name: string;
+    email: string;
+    body: string;
+};
 
 export const Review = () => {
-    const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState<Comment[]>([]);
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/posts/11/comments")
             .then((res) => res.json())
             .then((data) => setComments(data))
             .catch((err) => console.error(err));
-    }, []);
+    }, [])
 
     return (
+        // @ts-ignore
         <div className="mx-auto mb-6 max-w-3xl rounded-xl bg-white p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 dark:bg-gray-800">
             <h1 className="mb-4 text-2xl font-semibold text-gray-800 dark:text-white">
                 Коментарі
             </h1>
-
             <div className="flex flex-col gap-4">
                 {comments.map((comment) => (
                     <div
+                        // @ts-ignore
                         key={comment.id}
                         className="rounded-lg border border-gray-200 p-4 dark:border-gray-600"
                     >

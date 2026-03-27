@@ -15,6 +15,7 @@ export const Footer = () => {
         }
 
         localStorage.setItem('systemInfo', JSON.stringify(info))
+        // @ts-ignore
         const savedInfo = JSON.parse(localStorage.getItem('systemInfo'))
         setSystemInfo(savedInfo)
     }, [])

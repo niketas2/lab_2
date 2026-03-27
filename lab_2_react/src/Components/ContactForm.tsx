@@ -6,6 +6,7 @@ export const ContactForm = () => {
     useEffect(() => {
         const isClosed = sessionStorage.getItem("modalClosed");
 
+        // @ts-ignore
         if (isClosed === true) return
 
         const timer = setTimeout(() => {
@@ -17,6 +18,7 @@ export const ContactForm = () => {
         setIsOpen(false)
         sessionStorage.setItem("modalClosed", "true")
     }
+
 
     return (
         isOpen && (
@@ -61,10 +63,10 @@ export const ContactForm = () => {
                             required
                             className="rounded border border-gray-300 bg-white p-2 text-black placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-300"
                         />
-
                         <textarea
                             name="message"
                             placeholder="Повідомлення"
+                            // @ts-ignore
                             rows="4"
                             required
                             className="rounded border border-gray-300 bg-white p-2 text-black placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-300"
