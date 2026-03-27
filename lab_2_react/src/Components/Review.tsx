@@ -19,26 +19,26 @@ export const Review = () => {
 
     return (
         // @ts-ignore
-        <div className="mx-auto mb-6 max-w-3xl rounded-xl bg-white p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 dark:bg-gray-800">
-            <h1 className="mb-4 text-2xl font-semibold text-gray-800 dark:text-white">
+        <div className="mx-auto mb-6 max-w-3xl rounded-xl bg-white p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 ">
+            <h1 className="mb-4 text-2xl font-semibold text-black ">
                 Коментарі
             </h1>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 text-black">
                 {comments.map((comment) => (
                     <div
                         // @ts-ignore
                         key={comment.id}
-                        className="rounded-lg border border-gray-200 p-4 dark:border-gray-600"
+                        className="rounded-lg border border-gray-200 p-4 text-black"
                     >
-                        <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
+                        <h2 className="text-lg font-semibold text-black">
                             {comment.name}
                         </h2>
 
-                        <p className="text-sm text-gray-500 dark:text-gray-300">
+                        <p className="text-sm text-black">
                             {comment.email}
                         </p>
 
-                        <p className="mt-2 text-gray-700 dark:text-gray-200">
+                        <p className="mt-2 text-black">
                             {comment.body}
                         </p>
                     </div>

@@ -46,7 +46,7 @@ function App() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-100 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-white">
+        <div className="min-h-screen bg-orange-300 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-white">
             <div className="mx-auto max-w-5xl px-4 py-6">
                 <button
                     onClick={toggleTheme}

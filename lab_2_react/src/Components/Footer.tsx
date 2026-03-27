@@ -23,17 +23,17 @@ export const Footer = () => {
     return (
         <footer
             className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md mb-6 transition:-trnasform duration-300 hover:translate-y-2">
-            <h2 className="text-2xl font-semibold mb-2 text-gray-800">
+            <h2 className="text-2xl font-semibold mb-2 text-black">
                 Контакти
             </h2>
 
-            <p className="text-gray-700">
+            <p className="text-black">
                 Email: mykyta.novykov.kb.2023@lpnu.ua
             </p>
 
-            <h1 className="text-xl font-semibold mt-4">Дані</h1>
+            <h1 className="text-xl font-semibold mt-4 text-black">Дані</h1>
             {systemInfo ? (
-                <div>
+                <div className="text-black">
                     {Object.entries(systemInfo).map(([key, value]) => (
                         <p key={key}>
                             <strong>{key}:</strong> {String(value)}
