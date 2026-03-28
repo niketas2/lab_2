@@ -20,6 +20,7 @@ export const ContactForm = () => {
     }
 
 
+
     return (
         isOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
@@ -67,6 +68,7 @@ export const ContactForm = () => {
                         <textarea
                             name="message"
                             placeholder="Повідомлення"
+                            // @ts-ignore
                             rows="4"
                             required
                             className="rounded-xl border border-gray-300 bg-white p-3 text-black outline-none transition focus:border-blue-500 dark:border-gray-600 dark:bg-slate-700 dark:text-white dark:placeholder:text-gray-300"
