@@ -23,20 +23,20 @@ export const ContactForm = () => {
     return (
         isOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
-                <div className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:text-white">
+                <div className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-xl dark:bg-slate-800 dark:text-white">
                     <button
                         onClick={closeModal}
-                        className="absolute right-3 top-2 text-2xl text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+                        className="absolute right-4 top-3 text-2xl text-gray-500 transition hover:text-black dark:text-gray-300 dark:hover:text-white"
                     >
                         ×
                     </button>
 
-                    <h2 className="mb-4 text-xl font-semibold">
+                    <h2 className="mb-4 border-b pb-2 text-2xl font-bold text-blue-900 dark:text-blue-300">
                         Форма зворотного зв’язку
                     </h2>
 
                     <form
-                        action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+                        action="https://formspree.io/f/mdawraoo"
                         method="POST"
                         className="flex flex-col gap-3"
                     >
@@ -45,7 +45,7 @@ export const ContactForm = () => {
                             name="name"
                             placeholder="Ім’я"
                             required
-                            className="rounded border border-gray-300 bg-white p-2 text-black placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-300"
+                            className="rounded-xl border border-gray-300 bg-white p-3 text-black outline-none transition focus:border-blue-500 dark:border-gray-600 dark:bg-slate-700 dark:text-white dark:placeholder:text-gray-300"
                         />
 
                         <input
@@ -53,7 +53,7 @@ export const ContactForm = () => {
                             name="email"
                             placeholder="Email"
                             required
-                            className="rounded border border-gray-300 bg-white p-2 text-black placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-300"
+                            className="rounded-xl border border-gray-300 bg-white p-3 text-black outline-none transition focus:border-blue-500 dark:border-gray-600 dark:bg-slate-700 dark:text-white dark:placeholder:text-gray-300"
                         />
 
                         <input
@@ -61,20 +61,20 @@ export const ContactForm = () => {
                             name="phone"
                             placeholder="Телефон"
                             required
-                            className="rounded border border-gray-300 bg-white p-2 text-black placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-300"
+                            className="rounded-xl border border-gray-300 bg-white p-3 text-black outline-none transition focus:border-blue-500 dark:border-gray-600 dark:bg-slate-700 dark:text-white dark:placeholder:text-gray-300"
                         />
+
                         <textarea
                             name="message"
                             placeholder="Повідомлення"
-                            // @ts-ignore
                             rows="4"
                             required
-                            className="rounded border border-gray-300 bg-white p-2 text-black placeholder:text-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-300"
+                            className="rounded-xl border border-gray-300 bg-white p-3 text-black outline-none transition focus:border-blue-500 dark:border-gray-600 dark:bg-slate-700 dark:text-white dark:placeholder:text-gray-300"
                         />
 
                         <button
                             type="submit"
-                            className="rounded bg-green-500 p-2 text-white transition hover:bg-green-600"
+                            className="rounded-xl bg-green-500 p-3 text-white transition hover:bg-green-600"
                         >
                             Відправити
                         </button>
@@ -82,6 +82,5 @@ export const ContactForm = () => {
                 </div>
             </div>
         )
-
-    );
+    )
 }

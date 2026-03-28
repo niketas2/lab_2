@@ -1,15 +1,17 @@
 
 export const Education = () => {
     return (
-        <section className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md mb-6 transition:-trnasform duration-300 hover:translate-y-2">
-            <h2 className="text-2xl font-semibold mb-3 text-gray-800">
+        <section className="mb-8 rounded-2xl bg-white p-6 shadow-md dark:bg-slate-800">
+            <h2 className="mb-4 border-b border-blue-200 pb-2 text-2xl font-bold text-blue-900 dark:border-slate-600 dark:text-blue-300">
                 Освіта
             </h2>
 
-            <p className="text-gray-700">
-                Студент університету за спеціальністю,
-                пов'язаною з інформаційними технологіями та програмуванням.
-            </p>
+            <div className="rounded-xl border-l-4 border-blue-500 bg-slate-50 p-5 dark:bg-slate-700/40">
+                <h3 className="font-semibold">Студент університету</h3>
+                <p className="mt-2 text-gray-700 dark:text-slate-200">
+                    Спеціальність пов'язана з інформаційними технологіями та програмуванням.
+                </p>
+            </div>
         </section>
     )
 }

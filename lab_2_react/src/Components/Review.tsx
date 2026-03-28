@@ -19,31 +19,31 @@ export const Review = () => {
 
     return (
         // @ts-ignore
-        <div className="mx-auto mb-6 max-w-3xl rounded-xl bg-white p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 ">
-            <h1 className="mb-4 text-2xl font-semibold text-black ">
+        <section className="mb-8 rounded-2xl bg-white p-6 shadow-md dark:bg-slate-800">
+            <h2 className="mb-4 border-b border-blue-200 pb-2 text-2xl font-bold text-blue-900 dark:border-slate-600 dark:text-blue-300">
                 Коментарі
-            </h1>
-            <div className="flex flex-col gap-4 text-black">
+            </h2>
+
+            <div className="flex flex-col gap-4">
                 {comments.map((comment) => (
                     <div
-                        // @ts-ignore
                         key={comment.id}
-                        className="rounded-lg border border-gray-200 p-4 text-black"
+                        className="rounded-xl border-l-4 border-blue-500 bg-slate-50 p-4 dark:bg-slate-700/40"
                     >
-                        <h2 className="text-lg font-semibold text-black">
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                             {comment.name}
-                        </h2>
+                        </h3>
 
-                        <p className="text-sm text-black">
+                        <p className="text-sm text-gray-500 dark:text-slate-300">
                             {comment.email}
                         </p>
 
-                        <p className="mt-2 text-black">
+                        <p className="mt-2 text-gray-700 dark:text-slate-200">
                             {comment.body}
                         </p>
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };

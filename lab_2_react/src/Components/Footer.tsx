@@ -21,28 +21,39 @@ export const Footer = () => {
     }, [])
 
     return (
-        <footer
-            className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md mb-6 transition:-trnasform duration-300 hover:translate-y-2">
-            <h2 className="text-2xl font-semibold mb-2 text-black">
+        <section className="rounded-2xl bg-white p-6 shadow-md dark:bg-slate-800">
+            <h2 className="mb-4 border-b border-blue-200 pb-2 text-2xl font-bold text-blue-900 dark:border-slate-600 dark:text-blue-300">
                 Контакти
             </h2>
 
-            <p className="text-black">
-                Email: mykyta.novykov.kb.2023@lpnu.ua
-            </p>
+            <div className="mb-6 rounded-xl border-l-4 border-blue-500 bg-slate-50 p-4 dark:bg-slate-700/40">
+                <p className="text-gray-700 dark:text-slate-200">
+                    <span className="font-semibold text-slate-900 dark:text-white">Email:</span><br />
+                    mykyta.novykov.kb.2023@lpnu.ua
+                </p>
 
-            <h1 className="text-xl font-semibold mt-4 text-black">Дані</h1>
+                <p className="mt-3 text-gray-700 dark:text-slate-200">
+                    <span className="font-semibold text-slate-900 dark:text-white">Місто:</span><br />
+                    Україна
+                </p>
+            </div>
+
+            <h3 className="mb-3 text-lg font-semibold text-slate-800 dark:text-white">
+                Системна інформація
+            </h3>
+
             {systemInfo ? (
-                <div className="text-black">
+                <div className="space-y-2 rounded-xl border-l-4 border-blue-500 bg-slate-50 p-4 dark:bg-slate-700/40">
                     {Object.entries(systemInfo).map(([key, value]) => (
-                        <p key={key}>
-                            <strong>{key}:</strong> {String(value)}
+                        <p key={key} className="break-words text-sm text-gray-700 dark:text-slate-200">
+                            <span className="font-semibold text-slate-900 dark:text-white">{key}:</span>{' '}
+                            {String(value)}
                         </p>
                     ))}
                 </div>
             ) : (
-                <p>Завантаження...</p>
+                <p className="text-gray-500 dark:text-slate-300">Завантаження...</p>
             )}
-        </footer>
-    )
+        </section>
+    );
 }

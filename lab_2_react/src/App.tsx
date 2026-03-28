@@ -6,7 +6,7 @@ import { Header } from './Components/Header'
 import { Skills } from './Components/Skills'
 import { Footer } from './Components/Footer'
 import { Review } from './Components/Review'
-import { ContactForm } from "./Components/ContactForm.tsx"
+import { ContactForm } from "./Components/ContactForm"
 import { useState, useEffect } from "react"
 
 function App() {
@@ -21,12 +21,7 @@ function App() {
         }
 
         const hour = new Date().getHours()
-
-        if (hour >= 7 && hour < 21) {
-            setTheme("light")
-        } else {
-            setTheme("dark")
-        }
+        setTheme(hour >= 7 && hour < 21 ? "light" : "dark")
     }, [])
 
     useEffect(() => {
@@ -46,23 +41,32 @@ function App() {
     }
 
     return (
-        <div className="min-h-screen bg-orange-300 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-white">
-            <div className="mx-auto max-w-5xl px-4 py-6">
+        <div className="min-h-screen bg-slate-100 text-slate-900 transition-colors duration-300 dark:bg-slate-900 dark:text-white">
+            <div className="mx-auto max-w-6xl px-4 py-8">
                 <button
                     onClick={toggleTheme}
-                    className="mb-6 inline-flex items-center justify-center rounded-lg bg-blue-500 px-4 py-2 text-white font-medium shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-blue-600 active:translate-y-0 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-300"
+                    className="mb-6 rounded-xl bg-blue-600 px-4 py-2 font-medium text-white shadow-md transition hover:bg-blue-700 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-300"
                 >
                     {theme === "dark" ? "Світла тема" : "Темна тема"}
                 </button>
 
                 <ContactForm />
-                <Header />
-                <About />
-                <Skills />
-                <Expirience />
-                <Education />
-                <Review />
-                <Footer />
+
+                <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
+                    <aside className="space-y-6">
+                        <Header />
+                        <Skills />
+                        <Footer />
+                    </aside>
+
+                    <main className="space-y-6">
+                        <About />
+                        <Expirience />
+                        <Education />
+                        <Review />
+
+                    </main>
+                </div>
             </div>
         </div>
     )
